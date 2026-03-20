@@ -383,81 +383,171 @@ export default function App() {
       <section id="skills" className="py-16 md:py-20 px-4 md:px-6 bg-black text-white">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20">
           <div>
-            <h2 className="section-title text-white mb-12">Technical Expertise</h2>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="section-title text-white mb-12"
+            >
+              Technical Expertise
+            </motion.h2>
             <div className="space-y-10">
-              <div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  visible: { transition: { staggerChildren: 0.05 } }
+                }}
+              >
                 <p className="mono-label text-white/40 mb-4">Languages</p>
                 <div className="flex flex-wrap gap-2">
                   {RESUME_DATA.skills.languages.map((s, i) => (
                     <Tooltip key={i} text={s.description}>
-                      <span className="px-4 py-2 rounded-full border border-white/10 text-sm hover:bg-white hover:text-black cursor-default transition-all duration-300 hover:scale-105">
+                      <motion.span 
+                        variants={{
+                          hidden: { opacity: 0, scale: 0.8 },
+                          visible: { opacity: 1, scale: 1 }
+                        }}
+                        className="px-4 py-2 rounded-full border border-white/10 text-sm hover:bg-white hover:text-black cursor-default transition-all duration-300 hover:scale-105"
+                      >
                         {s.name}
-                      </span>
+                      </motion.span>
                     </Tooltip>
                   ))}
                 </div>
-              </div>
-              <div>
+              </motion.div>
+
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  visible: { transition: { staggerChildren: 0.05 } }
+                }}
+              >
                 <p className="mono-label text-white/40 mb-4">Frameworks & Libraries</p>
                 <div className="flex flex-wrap gap-2">
                   {RESUME_DATA.skills.frameworks.map((s, i) => (
                     <Tooltip key={i} text={s.description}>
-                      <span className="px-4 py-2 rounded-full border border-white/10 text-sm hover:bg-white hover:text-black cursor-default transition-all duration-300 hover:scale-105">
+                      <motion.span 
+                        variants={{
+                          hidden: { opacity: 0, scale: 0.8 },
+                          visible: { opacity: 1, scale: 1 }
+                        }}
+                        className="px-4 py-2 rounded-full border border-white/10 text-sm hover:bg-white hover:text-black cursor-default transition-all duration-300 hover:scale-105"
+                      >
                         {s.name}
-                      </span>
+                      </motion.span>
                     </Tooltip>
                   ))}
                 </div>
-              </div>
-              <div>
+              </motion.div>
+
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  visible: { transition: { staggerChildren: 0.05 } }
+                }}
+              >
                 <p className="mono-label text-white/40 mb-4">Tools & Platforms</p>
                 <div className="flex flex-wrap gap-2">
                   {RESUME_DATA.skills.tools.map((s, i) => (
                     <Tooltip key={i} text={s.description}>
-                      <span className="px-4 py-2 rounded-full border border-white/10 text-sm hover:bg-white hover:text-black cursor-default transition-all duration-300 hover:scale-105">
+                      <motion.span 
+                        variants={{
+                          hidden: { opacity: 0, scale: 0.8 },
+                          visible: { opacity: 1, scale: 1 }
+                        }}
+                        className="px-4 py-2 rounded-full border border-white/10 text-sm hover:bg-white hover:text-black cursor-default transition-all duration-300 hover:scale-105"
+                      >
                         {s.name}
-                      </span>
+                      </motion.span>
                     </Tooltip>
                   ))}
                 </div>
-              </div>
-              <div>
+              </motion.div>
+
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  visible: { transition: { staggerChildren: 0.05 } }
+                }}
+              >
                 <p className="mono-label text-white/40 mb-4">Financial & Business</p>
                 <div className="flex flex-wrap gap-2">
                   {RESUME_DATA.skills.financial.map((s, i) => (
                     <Tooltip key={i} text={s.description}>
-                      <span className="px-4 py-2 rounded-full border border-white/10 text-sm hover:bg-white hover:text-black cursor-default transition-all duration-300 hover:scale-105">
+                      <motion.span 
+                        variants={{
+                          hidden: { opacity: 0, scale: 0.8 },
+                          visible: { opacity: 1, scale: 1 }
+                        }}
+                        className="px-4 py-2 rounded-full border border-white/10 text-sm hover:bg-white hover:text-black cursor-default transition-all duration-300 hover:scale-105"
+                      >
                         {s.name}
-                      </span>
+                      </motion.span>
                     </Tooltip>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
 
           <div>
-            <h2 className="section-title text-white mb-12">Education</h2>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="section-title text-white mb-12"
+            >
+              Education
+            </motion.h2>
             <div className="space-y-12">
               {RESUME_DATA.education.map((edu, i) => (
-                <div key={i} className="relative pl-8 border-l border-white/10">
+                <motion.div 
+                  key={i} 
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="relative pl-8 border-l border-white/10"
+                >
                   <div className="absolute left-[-5px] top-0 w-[9px] h-[9px] rounded-full bg-accent" />
                   <p className="font-mono text-xs opacity-40 mb-2">{edu.period}</p>
                   <h3 className="text-lg md:text-xl font-bold mb-1">{edu.degree}</h3>
                   <p className="opacity-70 mb-2 text-sm md:text-base">{edu.institution}</p>
                   <p className="text-sm font-medium text-accent">CGPA: {edu.gpa}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
 
             <div className="mt-16 md:mt-20">
-              <h2 className="section-title text-white mb-8">Certifications</h2>
+              <motion.h2 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="section-title text-white mb-8"
+              >
+                Certifications
+              </motion.h2>
               <ul className="space-y-4">
                 {RESUME_DATA.certifications.map((cert, i) => (
-                  <li key={i} className="flex items-center gap-3 opacity-70 hover:opacity-100 text-sm md:text-base">
+                  <motion.li 
+                    key={i} 
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-center gap-3 opacity-70 hover:opacity-100 text-sm md:text-base"
+                  >
                     <Award size={18} className="text-accent" />
                     <span>{cert}</span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>

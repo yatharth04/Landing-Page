@@ -142,7 +142,7 @@ export const RESUME_DATA: ResumeData = {
       { name: "Data Interpretation", description: "Turning raw data into actionable business strategies." }
     ]
   },
-  resumeUrl: import.meta.env.VITE_RESUME_URL || "data:application/pdf;base64,JVBERi0xLjAKMSAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMiAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUl0KL0NvdW50IDEKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL1BhZ2UKL1BhcmVudCAyIDAgUgovTWVkaWFCb3ggWzAgMCA2MTIgNzkyXQovUmVzb3VyY2VzIDw8Pj4KL0NvbnRlbnRzIDQgMCBSCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9MZW5ndGggMAo+PgpzdHJlYW0KZW5kc3RyZWFtCmVuZG9iagp0cmFpbGVyCjw8Ci9TaXplIDUKL1Jvb3QgMSAwIFIKPj4KJSVFT0Y=", // Use VITE_RESUME_URL env var or fallback to minimal PDF
+  resumeUrl: "https://drive.google.com/file/d/16ii53bSpcAPlOpCGsm20VM5RTM6DHQI3/view?usp=sharing", // Use VITE_RESUME_URL env var or fallback to minimal PDF
   publications: [
     {
       title: "Analyzing Video Surveillance to Handle Traffic Occlusion",
