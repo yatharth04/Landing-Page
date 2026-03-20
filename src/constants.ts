@@ -142,7 +142,7 @@ export const RESUME_DATA: ResumeData = {
       { name: "Data Interpretation", description: "Turning raw data into actionable business strategies." }
     ]
   },
-  resumeUrl: "https://drive.google.com/file/d/16ii53bSpcAPlOpCGsm20VM5RTM6DHQI3/view?usp=sharing", // Use VITE_RESUME_URL env var or fallback to minimal PDF
+  resumeUrl: "https://docsend.com/view/uhgvp4fuv3sr7wwt/d/ew2dfh2jw9yk7xcz", // Use VITE_RESUME_URL env var or fallback to minimal PDF
   publications: [
     {
       title: "Analyzing Video Surveillance to Handle Traffic Occlusion",
