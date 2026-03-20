@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-bg-light: #fdfdfc;
+  --color-bg-dark: #0a0a0a;
+  --color-ink-light: #1a1a1a;
+  --color-ink-dark: #f5f5f5;
+  --color-accent: #3b82f6;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-[#fdfdfc] text-[#1a1a1a] transition-all duration-500 ease-in-out;
+  }
+
+  html.dark body {
+    @apply bg-[#0a0a0a] text-[#f5f5f5];
+  }
+
+  * {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-xl bg-white/80 border border-black/5 shadow-sm;
+  }
+  
+  .dark .glass {
+    @apply bg-black/80 border-white/10 shadow-none;
+  }
+
+  .section-title {
+    @apply font-serif italic text-3xl md:text-4xl mb-8 tracking-tight text-neutral-900 dark:text-neutral-50;
+  }
+
+  .mono-label {
+    @apply font-mono text-[10px] uppercase tracking-widest opacity-50;
+  }
+
+  .sharpen {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
